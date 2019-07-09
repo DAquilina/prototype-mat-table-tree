@@ -1,0 +1,10 @@
+ul, li {
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style-type: none;
+}
+
+.child-node,
+.mat-tree-node {
+    padding-left: 15px;
+}

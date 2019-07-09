@@ -1,14 +1,24 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule } from "@angular/core";
+import { CdkTableModule } from "@angular/cdk/table";
+import { MatButtonModule, MatIconModule, MatTableModule, MatTreeModule } from "@angular/material";
+import { BrowserModule } from "@angular/platform-browser";
 
-import { AppComponent } from './app.component';
+import { AppComponent } from "./app.component";
+import { TreeContainerComponent } from "./tree-container/tree-container.component";
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TreeContainerComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    CdkTableModule,
+    MatButtonModule,
+    MatIconModule,
+    MatTableModule,
+    MatTreeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

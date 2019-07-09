@@ -1,0 +1,17 @@
+<mat-tree [dataSource]="dataSource" [treeControl]="treeControl" class="example-tree">
+    <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle>
+        <div>
+            {{node.name}}
+        </div>
+    </mat-tree-node>
+
+    <mat-nested-tree-node *matTreeNodeDef="let node; when: hasChildren">
+        <div matTreeNodeToggle [matTreeNodeToggleRecursive]="true" class="mat-tree-node">
+            {{node.name}}
+        </div>
+
+        <div class="child-node">
+            <ng-container matTreeNodeOutlet></ng-container>
+        </div>
+    </mat-nested-tree-node>
+</mat-tree>
